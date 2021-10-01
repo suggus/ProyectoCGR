@@ -17,7 +17,7 @@ public class Conector {
             //Cargamos el driver
             Class.forName("org.sqlite.JDBC");
             //Establecemos la conexión con la base de datos
-            conector = DriverManager.getConnection("jdbc:sqlite:BBDD_SQLite.db");
+            conector = DriverManager.getConnection("jdbc:sqlite:parquesqlite.db");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }

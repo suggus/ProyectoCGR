@@ -11,7 +11,8 @@ public class Conecta_Pruebas {
         Connection miConexion;
 
         Conector cn = new Conector();
-        miConexion = cn.conectorMariaDB();
+        //miConexion = cn.conectorMariaDB();
+        miConexion = cn.conectorSQLite();
 
         //Obtención de metadatos
         DatabaseMetaData datosBBDD = miConexion.getMetaData();
