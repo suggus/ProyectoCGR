@@ -36,6 +36,25 @@ public class Conecta_Pruebas {
             System.out.println(miMetaResult.getString("COLUMN_NAME"));
         }
 
+        //Preparamos la consulta (crear el objeto Statement)
+        Statement miSentencia = miConexion.createStatement();
+
+        //1.0 Insertar, actualizar y borrar
+        String instruccionSql1 = "INSERT INTO cliente (nombre) VALUES ('Raul')";
+
+        //Ejecutar el SQL
+        //1.1 Insertar, actualizar y borrar
+        miSentencia.executeUpdate(instruccionSql1);
+        System.out.println("Datos insertados correctamente");
+
+        ResultSet miResultSet = miSentencia.executeQuery("SELECT * FROM cliente");
+
+        while (miResultSet.next()){
+            System.out.println(miResultSet.getString("Nombre") + " " + miResultSet.getString(2));
+        }
+
+        miConexion.close();
+
     }
 
 }

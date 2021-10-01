@@ -27,7 +27,7 @@ public class Conector {
     public Connection conectorMariaDB(){
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306","root","u12345");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/parquemariadb","root","u12345");
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
